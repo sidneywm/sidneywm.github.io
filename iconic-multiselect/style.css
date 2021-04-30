@@ -47,6 +47,7 @@ main {
 
 .highlight {
   padding: 8px;
+  margin-bottom: 32px;
   border-radius: 8px;
 }
 
