@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iconic Multiselect - A multiselect component in pure JavaScript</title>
+    <link rel="icon" type="image/svg" href="star.svg" />
+    <link href="github-ribbon.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <span id="forkongithub"><a href="https://github.com/sidneywm/iconic-dropdown">Fork me on GitHub</a></span>
+    <main>
+      <div class="title">
+        <img src="star.svg" />
+        <h1>ICONIC DROPDOWN</h1>
+      </div>
+      <p>Demo - Default theme</p>
+      <select id="foods">
+        <option value="bread">Bread</option>
+        <option value="cereal">Cereal</option>
+        <option value="pasta">Pasta</option>
+        <option value="rice">Rice</option>
+        <option value="meat">Meat</option>
+        <option value="fish">Fish</option>
+    </select>
+
+      <p class="code">HTML:</p>
+      <pre
+        class="highlight"
+        style="
+          display: block;
+          overflow-x: auto;
+          padding: 16px;
+          width: 350px;
+          background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+          color: rgb(255, 255, 255);
+        "
+      >&lt;select id=<span class="hljs-string" style="color: rgb(162, 252, 162);">"foods"</span>&gt;
+  &lt;<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span> <span class="hljs-keyword" style="color: rgb(252, 194, 140);">value</span>=<span class="hljs-string" style="color: rgb(162, 252, 162);">"bread"</span>&gt;Bread&lt;/<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span>&gt;
+  &lt;<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span> <span class="hljs-keyword" style="color: rgb(252, 194, 140);">value</span>=<span class="hljs-string" style="color: rgb(162, 252, 162);">"cereal"</span>&gt;Cereal&lt;/<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span>&gt;
+  &lt;<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span> <span class="hljs-keyword" style="color: rgb(252, 194, 140);">value</span>=<span class="hljs-string" style="color: rgb(162, 252, 162);">"pasta"</span>&gt;Pasta&lt;/<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span>&gt;
+  &lt;<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span> <span class="hljs-keyword" style="color: rgb(252, 194, 140);">value</span>=<span class="hljs-string" style="color: rgb(162, 252, 162);">"rice"</span>&gt;Rice&lt;/<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span>&gt;
+  &lt;<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span> <span class="hljs-keyword" style="color: rgb(252, 194, 140);">value</span>=<span class="hljs-string" style="color: rgb(162, 252, 162);">"meat"</span>&gt;Meat&lt;/<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span>&gt;
+  &lt;<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span> <span class="hljs-keyword" style="color: rgb(252, 194, 140);">value</span>=<span class="hljs-string" style="color: rgb(162, 252, 162);">"fish"</span>&gt;Fish&lt;/<span class="hljs-keyword" style="color: rgb(252, 194, 140);">option</span>&gt;
+&lt;/select&gt;</pre>
+      <p class="code-two">JavaScript:</p>
+      <pre
+        class="highlight"
+        style="
+          display: block;
+          overflow-x: auto;
+          padding: 16px;
+          width: 350px;
+          background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+          color: rgb(255, 255, 255);
+        "
+      ><span class="hljs-keyword" style="color: rgb(252, 194, 140);">var</span> dropdown = <span class="hljs-keyword" style="color: rgb(252, 194, 140);">new</span> IconicDropdown({
+  select: <span class="hljs-string" style="color: rgb(162, 252, 162);">"<span class="hljs-subst">#foods</span>"</span>,
+  placeholder: <span class="hljs-string" style="color: rgb(162, 252, 162);">"<span class="hljs-subst">Select food...</span>"</span>,
+
+});
+     
+dropdown.init();
+     
+     </pre>
+      <a class="github" href="https://github.com/sidneywm/iconic-dropdown"><img src="octocat.png" /></a>
+      <p class="author">Built by Sidney Wimart</p>
+    </main>
+  </body>
+  <script src="dropdown.min.js" type="text/javascript"></script>
+
+  <script>
+    var dropdown = new IconicDropdown({
+      select: "#foods",
+      placeholder: 'Select food...',
+    });
+    dropdown.init();
+  </script>
+</html>
