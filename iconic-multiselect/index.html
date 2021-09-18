@@ -7,7 +7,8 @@
     <title>Iconic Multiselect - A multiselect component in pure JavaScript</title>
     <link rel="icon" type="image/svg" href="star.svg" />
     <link href="github-ribbon.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="multi-select.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
     <span id="forkongithub"><a href="https://github.com/sidneywm/iconic-multiselect">Fork me on GitHub</a></span>
@@ -16,7 +17,7 @@
         <img src="star.svg" />
         <h1>ICONIC MULTISELECT</h1>
       </div>
-      <p>Demo - Default theme</p>
+      <p>Demo - Default template</p>
       <select id="foods">
         <option value="bread">Bread</option>
         <option value="cereal">Cereal</option>
@@ -24,7 +25,11 @@
         <option value="rice">Rice</option>
         <option value="meat">Meat</option>
         <option value="fish">Fish</option>
-    </select>
+      </select>
+
+      <p>Demo - Custom template</p>
+      <select id="employees"></select>
+
 
       <p class="code">HTML:</p>
       <pre
@@ -70,10 +75,28 @@ multiSelect.init();
   <script src="multi-select-min.js" type="text/javascript"></script>
 
   <script>
-    var multiSelect = new IconicMultiSelect({
+
+    var foodsMultiSelect = new IconicMultiSelect({
       select: "#foods",
-      placeholder: 'Select food...',
+      placeholder: "Select food...",
     });
-    multiSelect.init();
+    foodsMultiSelect.init();
+
+    var employeesMultiSelect = new IconicMultiSelect({
+      data: [
+        { text: 'Clara Smith', value: 'clara_smith', imageUrl: 'face2.jpg', location: 'Paris, France'},
+        { text: 'John Doe', value: 'john_doe', imageUrl: 'face1.png', location: 'New York, USA'}, 
+        { text: 'Morgane Amroc', value: 'morgane_amroc', imageUrl: 'face3.png', location: 'Milan, Italy'},
+        { text: 'Peter Goldenfield', value: 'peter_goldenfield', imageUrl: 'face4.jpg', location: 'Los Angeles, USA'},
+      ],
+      itemTemplate: '<div class="demo-template"><span class="demo-template__img" style="background-image: url(./images/${imageUrl});"></span> ${text} - ${location}</div>',
+      placeholder: 'Select employees...',
+      select: "#employees",
+      tagTemplate: '<div class="demo-tag-template"><span class="demo-tag-template__img" style="background-image: url(./images/${imageUrl});"></span> ${text}</div>',
+      textField: 'text',
+      valueField: 'value',
+    });
+
+    employeesMultiSelect.init();
   </script>
 </html>

@@ -65,3 +65,29 @@ main {
   width: 64px;
   margin-right: 16px;
 }
+
+.demo-template, .demo-tag-template {
+  display: flex;
+  align-items: center;
+}
+
+.demo-template__img {
+  border-radius: 100%;
+  height: 32px;
+  width: 32px;
+  border: 2px solid #656565;
+  background-size: cover;
+  background-position: center;
+  margin-right: 8px;
+  display: block;
+}
+
+.demo-tag-template__img {
+  border-radius: 100%;
+  height: 21px;
+  width: 21px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 4px;
+  display: block;
+}
