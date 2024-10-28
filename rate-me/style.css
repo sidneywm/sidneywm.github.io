@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: verdana;
+    background-color: #222A40;
+}
+
+/* Stars */
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px 48px 48px 48px;
+    background-color: #F6F5F7;
+    gap: 16px;
+    border-radius: 12px;
+
+    h2 {
+        margin: 0;
+        font-weight: 500;
+    }
+}
+
+.rating-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: inherit;
+    position: relative;
+}
+
+.star-number {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.star-selection {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    height: 36px;
+    width: 14px;
+    padding: 0 4px;
+    background-color: inherit;
+}
+
+.star-half-left-2x {
+    display: block;
+    position: absolute;
+    left: -18px;
+    height: 36px;
+    width: 36px;
+    background-color: #ffc601;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 50% 71%, 50% 61%, 50% 49%, 50% 36%);
+}
+
+.star-half-left {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: -12px;
+    height: 24px;
+    width: 24px;
+    background-color: inherit;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 50% 71%, 50% 61%, 50% 49%, 50% 36%);
+}
+
+.star-half-right-2x {
+    display: block;
+    position: absolute;
+    right: -18px;
+    height: 36px;
+    width: 36px;
+    background-color: #ffc601;
+    clip-path: polygon(50% 0%, 50% 36%, 50% 44%, 50% 60%, 50% 67%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+
+.star-half-right {
+    display: block;
+    position: absolute;
+    right: -12px;
+    top: 6px;
+    height: 24px;
+    width: 24px;
+    background-color: inherit;
+    clip-path: polygon(50% 0%, 50% 36%, 50% 44%, 50% 60%, 50% 67%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star-selection:hover .star-half-left,
+.star-selection:hover .star-half-right,
+.star-selection:hover~.star-selection .star-half-left,
+.star-selection:hover~.star-selection .star-half-right {
+    background-color: #ffc601;
+}
+
+.star-selection:hover+.star-number {
+    display: block;
+}
